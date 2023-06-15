@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const orderSchema = new mongoose.Schema(
     {
-        userIdx:{type: String, required: true,},
+        userId:{type: String, required: true,},
         cartProducts:[
             {
                 ProductId: {type: String},
@@ -17,6 +17,6 @@ const orderSchema = new mongoose.Schema(
        
     },{timestamps: true}
 )
-module.exports = mongoose.model("Product", orderSchema)
+const Orders = mongoose.model("Orders", orderSchema)
 
-export {orderSchema}
+export {Orders}
